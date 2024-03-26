@@ -1,0 +1,234 @@
+:root {
+    --heading-color: #000; 
+    --body-color: #111;
+    --black-font: 700;
+    --bold-font: 500;
+    --medium-font: 400;
+    --light-font: 200;
+    --blue-nav-color: #7987FF;
+    --red-nav-color: #e41a4a;
+    --green-nav-color: #5CE2B2;
+}
+
+* {
+    font-family: Inter, Helvetica, sans-serif;
+    font-weight: var(--light-font);
+    color: var(--body-color);
+}
+
+.container {
+    position: relative;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    overflow: scroll;
+}
+
+table, tbody, thead, tr, th, td {
+    font-family:"Ubuntu", "Roboto Mono", "Helvetica", sans-serif;
+    /* border: 1px solid #777; */
+    border-collapse: collapse;
+    padding: 1vw 2.5vw;
+    text-align: center;
+    background-color: #f0f4f5;
+}
+
+thead, th {
+    background-color: #e3e7ea !important;
+    border-bottom-color: #0094bc;
+    font-weight: var(--bold-font);
+    color: var(--heading-color);
+}
+
+button {
+    border: none;
+    text-decoration-style: none;
+    color: #FFF;
+    background-color: #CCC;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: .9rem;
+}
+
+.btn-green {
+    background-color: var(--green-nav-color);
+}
+
+.btn-red {
+    background-color: var(--red-nav-color);
+}
+
+.editar {
+    background-color: var(--blue-nav-color);
+}
+
+.excluir {
+    background-color: #e41a4a !important;
+}
+
+.create {
+    background-color: #b83ffe !important;
+}
+
+.circle {
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    background-color: #EEE; 
+}
+
+table .circle {
+    height: 25px;
+    width: 25px;
+}
+
+.color-name {
+    font-size: .7rem;
+}
+
+.Blue {
+    background-color: #0094bc !important;
+}
+
+.Red {  
+    background-color: #e41a4a !important;
+}
+
+.Yellow {
+    background-color: rgb(253, 253, 119) !important;
+}
+
+.Green {
+    background-color: #018790 !important;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+    background-color: #FFF;
+    width: 60%;
+    margin: 15% auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    flex-direction: column;
+}
+    
+.modal .modal-content .title {
+    font-weight: var(--black-font);
+    font-size: 24px;
+}
+
+.modal-content .modal-body {
+    padding: 20px 0;
+}
+
+.modal-content .modal-body > form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 25px;
+}
+
+.modal-content .modal-body .input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content .modal-body .input-group label {
+    font-weight: var(--medium-font); 
+    margin-bottom: 10px;
+}
+
+.modal-content .modal-body .input-group input {
+    padding: 8px 15px; 
+    border: .5px solid #DDD;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.modal .modal-content .modal-buttons {
+    margin: 1vh;
+}
+
+.break {
+    width: 50%;
+    margin: 5vh 0px !important;
+    text-align: center;
+}
+
+.colors-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0px 0px !important;
+    padding: 0 !important;
+}
+
+.colors-list li {
+    cursor: pointer;
+}
+
+.color-group {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.color-group .checked {
+    border: 4px solid #4FC0FF;
+}
+.color-group .color-name {
+    text-align: center;
+}
+
+
+@media(max-width: 480px) {
+    table, thead, tbody, tr, th, td {
+        padding: .5vw 1vw ; 
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .modal-content .modal-body .input-group {
+        margin-bottom: 15px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .break {
+        width: 70%;
+        margin-top: 25px;
+    }
+}
