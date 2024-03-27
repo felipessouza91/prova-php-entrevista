@@ -1,5 +1,7 @@
 <?php
 try {
+    ini_set('display_errors', 0);
+
     require 'connection.php';
 
     $connection = new Connection();

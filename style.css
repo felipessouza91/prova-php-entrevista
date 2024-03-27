@@ -26,6 +26,7 @@
 
 table {
     overflow: scroll;
+    border-radius: 15px;
 }
 
 table, tbody, thead, tr, th, td {
@@ -106,7 +107,7 @@ table .circle {
 }
 
 .Yellow {
-    background-color: rgb(253, 253, 119) !important;
+    background-color: #fbbf44 !important;
 }
 
 .Green {
