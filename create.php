@@ -10,7 +10,7 @@ try {
 
     $empty_inputs =  new Exception("campos vazios", 100);
     
-    if( empty( $_POST['name'] ) && empty( $_POST['email']) ) throw $empty_inputs;
+    if( empty( $_POST['name'] ) || empty( $_POST['email']) ) throw $empty_inputs;
 
     $user_name = $_POST['name'];
     $user_email = $_POST['email'];
@@ -24,7 +24,7 @@ try {
 
     if( $user_colors->count ) {
         $connection->query( "UPDATE `user_colors` SET color_id = $color_id WHERE `user_id` = $user_id" );
-    } else {
+    } elseif ( !empty( $color_id ) ) {
         $connection->query( "INSERT INTO `user_colors` (`user_id`, `color_id`) VALUES ($user_id, $color_id)" );        
     }
     
